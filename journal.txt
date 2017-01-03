@@ -1,0 +1,13 @@
+Diego, Ryan, Nevan, Hunter -- group work
+
+got client info: they want
+	To take a folder of images and imbed them into eachother in the form of circles
+storm:
+call image, 
+resize to 50% call #
+crop to circle
+save as PIL
+paste onto parent
+repeat until done
+
+

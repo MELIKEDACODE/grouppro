@@ -28,7 +28,7 @@ def get_images(directory=None):
             pass # do nothing with errors tying to open non-images
     return image_list, file_list
 ''' '''
-def inside(times = 5,):
+def inside(times = 5):
 
     directory = os.getcwd() # Use working directory if unspecified
     image_list, file_list = get_images(directory)
