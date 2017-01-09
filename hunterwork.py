@@ -1,7 +1,9 @@
 import PIL
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt # single use of plt is commented out
 import os.path  
-#import functions and libraries
+import PIL.ImageDraw            
+times = 0 
+#import functions and libraries, declare vars
 
 
     

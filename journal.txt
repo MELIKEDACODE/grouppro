@@ -18,5 +18,10 @@ Hunter: Assigned to image paste on one another
 Grant: helps
 Ryan: assigned to image borders
 
-
+day 3:
+nevan consulted with Hunter to import code
+diego got image shrinking code complete
+Hunter worked on making the pasting code work, got images to paste the next one onto the previous, will work on layers next
+Grant played pokemon, i think
+Ryan helped with diego's code
 

@@ -59,7 +59,7 @@ def alter_all_images(directory=None):
 def shrink_images(original_image, times):
     width, height = original_image.size
     
-    new_image = original_image.resize((width / (1 * times), height / (1 * times))) #resize to 250 x250
+    new_image = original_image.resize((width / (1 * times), height / (1 * times))) #resize to smaller
     return new_image
 
     
