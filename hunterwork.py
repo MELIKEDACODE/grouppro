@@ -42,9 +42,6 @@ def paste(directory = None):
     except OSError:
         pass # if the directory already exists, proceed 
     image_list, file_list = get_images(directory)#pulls images from list
-    width, height = original_image.size
-    midx = width /2 #finds x midpoint
-    midy = height /2#finds y midpoint
     for n in range(len(image_list)):
         width, height = image_list[n].size
         midx = width /2 #finds x midpoint
