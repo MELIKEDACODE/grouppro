@@ -25,3 +25,10 @@ Hunter worked on making the pasting code work, got images to paste the next one 
 Grant played pokemon, i think
 Ryan helped with diego's code
 
+Final day:
+Nevan attempted to make the circles work, but time is running short, so we consulted the client, they will accept squares
+Diego consulted on the pasting function
+Hunter Finished writing the code for the project
+Grant Played pokemon
+Ryan Ran through the logic on the pasting function and provided support 
+
