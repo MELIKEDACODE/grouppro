@@ -62,13 +62,13 @@ def round_corners(original_image, percent_of_side):
 
     #Draw four filled circles of opaqueness
     drawing_layer.ellipse((0,0, 2*radius, 2*radius), 
-                            fill=(0,127,127,255)) #top left
+                            fill=(0,127,127,0)) #top left
     drawing_layer.ellipse((width-2*radius, 0, width,2*radius), 
-                            fill=(0,127,127,255)) #top right
+                            fill=(0,127,127,0)) #top right
     drawing_layer.ellipse((0,height-2*radius,  2*radius,height), 
-                            fill=(0,127,127,255)) #bottom left
+                            fill=(0,127,127,0)) #bottom left
     drawing_layer.ellipse((width-2*radius, height-2*radius, width, height), 
-                            fill=(0,127,127,255)) #bottom right
+                            fill=(0,127,127,0)) #bottom right
                          
     # Uncomment the following line to show the mask
     # plt.imshow(rounded_mask)
@@ -112,7 +112,10 @@ def alter_all_images(directory=None):
         filename, filetype = os.path.splitext(file_list[n])
         new_image = round_corners(image_list[n],.50)
         new_image_filename = os.path.join(new_directory, filename + '.png')
-        new_image.save(new_image_filename)   #end nevan Import
+        new_image.save(new_image_filename)  
+    image_list, file_list = get_images(directory)  
+
+#end nevan Import
     for n in range(len(image_list)):
         # Parse the filename
         filename, filetype = os.path.splitext(file_list[n])
@@ -144,18 +147,20 @@ def paste(directory = None):
     dep = 0
     
     for n in range(len(image_list)):
-        dep = dep +1
+        
         filename, filetype = os.path.splitext(file_list[n]) #parses filename
         width, height = image_list[n].size
         midx = width /4 #finds x midpoint
         midy = height /4#finds y midpoint
         big = image_list[n]#takes current image
-        try:
+        if dep == 0:#checks for first runtime
             small = image_list[n+1]#takes next image
-        except IndexError:
-                return "done" #passes when images reach end
-        big.paste(small, (midx,midy)) #pastes on top
-        
+            big.paste(small, (midx,midy)) #pastes on top
+            do_filename = os.path.join(new_directory, filename + '.png')
+            big.save(do_filename)#saves to cwd
+            dep = dep+1
+        else:
+            small = 1
         do_filename = os.path.join(new_directory, filename + '.png')
         big.save(do_filename)#saves to cwd
 
